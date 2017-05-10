@@ -10,6 +10,7 @@ class CreateAchievements extends AbstractMigration
     public function change()
     {
         $table = $this->table('achievements');
+
         $table->addColumn('game_id', 'integer', [
             'default' => null,
             'limit' => 11,
