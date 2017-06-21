@@ -21,6 +21,7 @@
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
+        <?php die; ?>
         <tbody>
             <?php foreach ($users as $user): ?>
             <tr>
