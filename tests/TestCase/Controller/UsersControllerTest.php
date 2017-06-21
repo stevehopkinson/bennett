@@ -9,6 +9,8 @@ use Cake\TestSuite\IntegrationTestCase;
  */
 class UsersControllerTest extends IntegrationTestCase
 {
+    use ControllerTestTrait;
+
     /**
      * Test delete method
      *
@@ -20,7 +22,7 @@ class UsersControllerTest extends IntegrationTestCase
         $this->configRequest([
             'headers' => ['Accept' => 'application/json']
         ]);
-        $this->get('users');
+        $this->get('/users');
         $this->assertResponseCode(200);
         $this->assertHeader('Content-Type', 'application/json');
     }
